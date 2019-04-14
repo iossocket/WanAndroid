@@ -16,6 +16,8 @@
 		D9C9577B226357660062D41D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9C95779226357660062D41D /* LaunchScreen.storyboard */; };
 		D9C95786226357670062D41D /* WanAndroidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C95785226357670062D41D /* WanAndroidTests.swift */; };
 		D9C95791226357670062D41D /* WanAndroidUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C95790226357670062D41D /* WanAndroidUITests.swift */; };
+		D9C957A522636ABA0062D41D /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D9C957A422636ABA0062D41D /* iconfont.ttf */; };
+		D9C957A822636B2C0062D41D /* IconFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C957A722636B2C0062D41D /* IconFont.swift */; };
 		DB0CFE69593F27B425263D36 /* Pods_WanAndroidTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E38AA9FF8F62018A7835140A /* Pods_WanAndroidTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +59,8 @@
 		D9C9578C226357670062D41D /* WanAndroidUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WanAndroidUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9C95790226357670062D41D /* WanAndroidUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WanAndroidUITests.swift; sourceTree = "<group>"; };
 		D9C95792226357670062D41D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9C957A422636ABA0062D41D /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
+		D9C957A722636B2C0062D41D /* IconFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconFont.swift; sourceTree = "<group>"; };
 		E0F33A8B7C3CB5E0043BF168 /* Pods-WanAndroidTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WanAndroidTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WanAndroidTests/Pods-WanAndroidTests.release.xcconfig"; sourceTree = "<group>"; };
 		E38AA9FF8F62018A7835140A /* Pods_WanAndroidTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WanAndroidTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -143,6 +147,8 @@
 				D9C95777226357660062D41D /* Assets.xcassets */,
 				D9C95779226357660062D41D /* LaunchScreen.storyboard */,
 				D9C9577C226357660062D41D /* Info.plist */,
+				D9C957A622636B1B0062D41D /* IconFont */,
+				D9C957A322636ABA0062D41D /* Resource */,
 			);
 			path = WanAndroid;
 			sourceTree = "<group>";
@@ -163,6 +169,22 @@
 				D9C95792226357670062D41D /* Info.plist */,
 			);
 			path = WanAndroidUITests;
+			sourceTree = "<group>";
+		};
+		D9C957A322636ABA0062D41D /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				D9C957A422636ABA0062D41D /* iconfont.ttf */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		D9C957A622636B1B0062D41D /* IconFont */ = {
+			isa = PBXGroup;
+			children = (
+				D9C957A722636B2C0062D41D /* IconFont.swift */,
+			);
+			path = IconFont;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +295,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9C957A522636ABA0062D41D /* iconfont.ttf in Resources */,
 				D9C9577B226357660062D41D /* LaunchScreen.storyboard in Resources */,
 				D9C95778226357660062D41D /* Assets.xcassets in Resources */,
 				D9C95776226357660062D41D /* Main.storyboard in Resources */,
@@ -398,6 +421,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9C95773226357660062D41D /* ViewController.swift in Sources */,
+				D9C957A822636B2C0062D41D /* IconFont.swift in Sources */,
 				D9C95771226357660062D41D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
