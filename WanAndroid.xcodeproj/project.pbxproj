@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		1FDF9326F03A6ADD49A2A336 /* Pods_WanAndroid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22FC477408CB5914F21AF247 /* Pods_WanAndroid.framework */; };
 		26455B7415408B1C2413FAEA /* Pods_WanAndroidUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75A6B9CA8382B152E3DFDA94 /* Pods_WanAndroidUITests.framework */; };
+		D9233119226EBCB000CDB9F0 /* WanAndroidService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9233118226EBCB000CDB9F0 /* WanAndroidService.swift */; };
+		D923311B226EBE6F00CDB9F0 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D923311A226EBE6F00CDB9F0 /* Banner.swift */; };
+		D923311D226ED09000CDB9F0 /* ResponseWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D923311C226ED09000CDB9F0 /* ResponseWrapper.swift */; };
+		D923311F226ED3CE00CDB9F0 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D923311E226ED3CE00CDB9F0 /* HomeInteractor.swift */; };
+		D9233121226ED73800CDB9F0 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9233120226ED73700CDB9F0 /* HomePresenter.swift */; };
 		D9C95771226357660062D41D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C95770226357660062D41D /* AppDelegate.swift */; };
 		D9C95776226357660062D41D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9C95774226357660062D41D /* Main.storyboard */; };
 		D9C95778226357660062D41D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9C95777226357660062D41D /* Assets.xcassets */; };
@@ -51,6 +56,11 @@
 		75A6B9CA8382B152E3DFDA94 /* Pods_WanAndroidUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WanAndroidUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96F887473CD0A761EF8EE705 /* Pods-WanAndroidUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WanAndroidUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WanAndroidUITests/Pods-WanAndroidUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BA7884ADF3A6D37DACCAA00D /* Pods-WanAndroid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WanAndroid.release.xcconfig"; path = "Pods/Target Support Files/Pods-WanAndroid/Pods-WanAndroid.release.xcconfig"; sourceTree = "<group>"; };
+		D9233118226EBCB000CDB9F0 /* WanAndroidService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WanAndroidService.swift; sourceTree = "<group>"; };
+		D923311A226EBE6F00CDB9F0 /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		D923311C226ED09000CDB9F0 /* ResponseWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseWrapper.swift; sourceTree = "<group>"; };
+		D923311E226ED3CE00CDB9F0 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		D9233120226ED73700CDB9F0 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		D9C9576D226357660062D41D /* WanAndroid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WanAndroid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9C95770226357660062D41D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9C95775226357660062D41D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -130,6 +140,8 @@
 			isa = PBXGroup;
 			children = (
 				D9C9580822675DA50062D41D /* HomeViewController.swift */,
+				D923311E226ED3CE00CDB9F0 /* HomeInteractor.swift */,
+				D9233120226ED73700CDB9F0 /* HomePresenter.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -174,6 +186,9 @@
 				D9C9580C22675E080062D41D /* WeChatViewController.swift */,
 				D9C9580E22675E320062D41D /* NavigationViewController.swift */,
 				D9C9581022675E4F0062D41D /* ProjectViewController.swift */,
+				D9233118226EBCB000CDB9F0 /* WanAndroidService.swift */,
+				D923311A226EBE6F00CDB9F0 /* Banner.swift */,
+				D923311C226ED09000CDB9F0 /* ResponseWrapper.swift */,
 				D9C9577C226357660062D41D /* Info.plist */,
 				D9C957A622636B1B0062D41D /* IconFont */,
 				D9C957A322636ABA0062D41D /* Resource */,
@@ -454,9 +469,14 @@
 				D9C9580F22675E320062D41D /* NavigationViewController.swift in Sources */,
 				D9C9580D22675E080062D41D /* WeChatViewController.swift in Sources */,
 				D9C9581122675E4F0062D41D /* ProjectViewController.swift in Sources */,
+				D923311F226ED3CE00CDB9F0 /* HomeInteractor.swift in Sources */,
 				D9C9580922675DA50062D41D /* HomeViewController.swift in Sources */,
 				D9C9580B22675DEC0062D41D /* KnowledgeViewController.swift in Sources */,
 				D9C957A822636B2C0062D41D /* IconFont.swift in Sources */,
+				D9233119226EBCB000CDB9F0 /* WanAndroidService.swift in Sources */,
+				D923311B226EBE6F00CDB9F0 /* Banner.swift in Sources */,
+				D9233121226ED73800CDB9F0 /* HomePresenter.swift in Sources */,
+				D923311D226ED09000CDB9F0 /* ResponseWrapper.swift in Sources */,
 				D9C9580722675CD80062D41D /* Skeleton.swift in Sources */,
 				D9C95771226357660062D41D /* AppDelegate.swift in Sources */,
 			);
