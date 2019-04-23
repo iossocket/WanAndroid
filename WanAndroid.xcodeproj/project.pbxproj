@@ -18,6 +18,12 @@
 		D9C95791226357670062D41D /* WanAndroidUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C95790226357670062D41D /* WanAndroidUITests.swift */; };
 		D9C957A522636ABA0062D41D /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D9C957A422636ABA0062D41D /* iconfont.ttf */; };
 		D9C957A822636B2C0062D41D /* IconFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C957A722636B2C0062D41D /* IconFont.swift */; };
+		D9C9580722675CD80062D41D /* Skeleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C9580622675CD80062D41D /* Skeleton.swift */; };
+		D9C9580922675DA50062D41D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C9580822675DA50062D41D /* HomeViewController.swift */; };
+		D9C9580B22675DEC0062D41D /* KnowledgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C9580A22675DEC0062D41D /* KnowledgeViewController.swift */; };
+		D9C9580D22675E080062D41D /* WeChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C9580C22675E080062D41D /* WeChatViewController.swift */; };
+		D9C9580F22675E320062D41D /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C9580E22675E320062D41D /* NavigationViewController.swift */; };
+		D9C9581122675E4F0062D41D /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C9581022675E4F0062D41D /* ProjectViewController.swift */; };
 		DB0CFE69593F27B425263D36 /* Pods_WanAndroidTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E38AA9FF8F62018A7835140A /* Pods_WanAndroidTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +67,12 @@
 		D9C95792226357670062D41D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9C957A422636ABA0062D41D /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
 		D9C957A722636B2C0062D41D /* IconFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconFont.swift; sourceTree = "<group>"; };
+		D9C9580622675CD80062D41D /* Skeleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skeleton.swift; sourceTree = "<group>"; };
+		D9C9580822675DA50062D41D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D9C9580A22675DEC0062D41D /* KnowledgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeViewController.swift; sourceTree = "<group>"; };
+		D9C9580C22675E080062D41D /* WeChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeChatViewController.swift; sourceTree = "<group>"; };
+		D9C9580E22675E320062D41D /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		D9C9581022675E4F0062D41D /* ProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
 		E0F33A8B7C3CB5E0043BF168 /* Pods-WanAndroidTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WanAndroidTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WanAndroidTests/Pods-WanAndroidTests.release.xcconfig"; sourceTree = "<group>"; };
 		E38AA9FF8F62018A7835140A /* Pods_WanAndroidTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WanAndroidTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -142,7 +154,13 @@
 			isa = PBXGroup;
 			children = (
 				D9C95770226357660062D41D /* AppDelegate.swift */,
+				D9C9580622675CD80062D41D /* Skeleton.swift */,
 				D9C95772226357660062D41D /* ViewController.swift */,
+				D9C9580822675DA50062D41D /* HomeViewController.swift */,
+				D9C9580A22675DEC0062D41D /* KnowledgeViewController.swift */,
+				D9C9580C22675E080062D41D /* WeChatViewController.swift */,
+				D9C9580E22675E320062D41D /* NavigationViewController.swift */,
+				D9C9581022675E4F0062D41D /* ProjectViewController.swift */,
 				D9C95774226357660062D41D /* Main.storyboard */,
 				D9C95777226357660062D41D /* Assets.xcassets */,
 				D9C95779226357660062D41D /* LaunchScreen.storyboard */,
@@ -420,8 +438,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9C9580F22675E320062D41D /* NavigationViewController.swift in Sources */,
+				D9C9580D22675E080062D41D /* WeChatViewController.swift in Sources */,
+				D9C9581122675E4F0062D41D /* ProjectViewController.swift in Sources */,
+				D9C9580922675DA50062D41D /* HomeViewController.swift in Sources */,
+				D9C9580B22675DEC0062D41D /* KnowledgeViewController.swift in Sources */,
 				D9C95773226357660062D41D /* ViewController.swift in Sources */,
 				D9C957A822636B2C0062D41D /* IconFont.swift in Sources */,
+				D9C9580722675CD80062D41D /* Skeleton.swift in Sources */,
 				D9C95771226357660062D41D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
