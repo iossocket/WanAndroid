@@ -10,7 +10,6 @@
 		1FDF9326F03A6ADD49A2A336 /* Pods_WanAndroid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22FC477408CB5914F21AF247 /* Pods_WanAndroid.framework */; };
 		26455B7415408B1C2413FAEA /* Pods_WanAndroidUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75A6B9CA8382B152E3DFDA94 /* Pods_WanAndroidUITests.framework */; };
 		D9C95771226357660062D41D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C95770226357660062D41D /* AppDelegate.swift */; };
-		D9C95773226357660062D41D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C95772226357660062D41D /* ViewController.swift */; };
 		D9C95776226357660062D41D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9C95774226357660062D41D /* Main.storyboard */; };
 		D9C95778226357660062D41D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9C95777226357660062D41D /* Assets.xcassets */; };
 		D9C9577B226357660062D41D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9C95779226357660062D41D /* LaunchScreen.storyboard */; };
@@ -54,7 +53,6 @@
 		BA7884ADF3A6D37DACCAA00D /* Pods-WanAndroid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WanAndroid.release.xcconfig"; path = "Pods/Target Support Files/Pods-WanAndroid/Pods-WanAndroid.release.xcconfig"; sourceTree = "<group>"; };
 		D9C9576D226357660062D41D /* WanAndroid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WanAndroid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9C95770226357660062D41D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D9C95772226357660062D41D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D9C95775226357660062D41D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D9C95777226357660062D41D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9C9577A226357660062D41D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -128,6 +126,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D9233116226EB85F00CDB9F0 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D9C9580822675DA50062D41D /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D9233117226EB86C00CDB9F0 /* Knowledge */ = {
+			isa = PBXGroup;
+			children = (
+				D9C9580A22675DEC0062D41D /* KnowledgeViewController.swift */,
+			);
+			path = Knowledge;
+			sourceTree = "<group>";
+		};
 		D9C95764226357660062D41D = {
 			isa = PBXGroup;
 			children = (
@@ -155,15 +169,11 @@
 			children = (
 				D9C95770226357660062D41D /* AppDelegate.swift */,
 				D9C9580622675CD80062D41D /* Skeleton.swift */,
-				D9C95772226357660062D41D /* ViewController.swift */,
-				D9C9580822675DA50062D41D /* HomeViewController.swift */,
-				D9C9580A22675DEC0062D41D /* KnowledgeViewController.swift */,
+				D9233117226EB86C00CDB9F0 /* Knowledge */,
+				D9233116226EB85F00CDB9F0 /* Home */,
 				D9C9580C22675E080062D41D /* WeChatViewController.swift */,
 				D9C9580E22675E320062D41D /* NavigationViewController.swift */,
 				D9C9581022675E4F0062D41D /* ProjectViewController.swift */,
-				D9C95774226357660062D41D /* Main.storyboard */,
-				D9C95777226357660062D41D /* Assets.xcassets */,
-				D9C95779226357660062D41D /* LaunchScreen.storyboard */,
 				D9C9577C226357660062D41D /* Info.plist */,
 				D9C957A622636B1B0062D41D /* IconFont */,
 				D9C957A322636ABA0062D41D /* Resource */,
@@ -192,6 +202,9 @@
 		D9C957A322636ABA0062D41D /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				D9C95774226357660062D41D /* Main.storyboard */,
+				D9C95777226357660062D41D /* Assets.xcassets */,
+				D9C95779226357660062D41D /* LaunchScreen.storyboard */,
 				D9C957A422636ABA0062D41D /* iconfont.ttf */,
 			);
 			path = Resource;
@@ -443,7 +456,6 @@
 				D9C9581122675E4F0062D41D /* ProjectViewController.swift in Sources */,
 				D9C9580922675DA50062D41D /* HomeViewController.swift in Sources */,
 				D9C9580B22675DEC0062D41D /* KnowledgeViewController.swift in Sources */,
-				D9C95773226357660062D41D /* ViewController.swift in Sources */,
 				D9C957A822636B2C0062D41D /* IconFont.swift in Sources */,
 				D9C9580722675CD80062D41D /* Skeleton.swift in Sources */,
 				D9C95771226357660062D41D /* AppDelegate.swift in Sources */,
