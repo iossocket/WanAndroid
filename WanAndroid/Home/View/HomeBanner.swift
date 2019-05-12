@@ -14,6 +14,8 @@ protocol HomeBannerDelegate: class {
 
 class HomeBanner: UIView {
     
+    static let HEIGHT: CGFloat = 200
+    
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -44,7 +46,7 @@ class HomeBanner: UIView {
             
             itemView.topAnchor.constraint(equalTo: scrollView.topAnchor).isActive = true
             itemView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
-            itemView.heightAnchor.constraint(equalToConstant: 200).isActive = true
+            itemView.heightAnchor.constraint(equalToConstant: HomeBanner.HEIGHT).isActive = true
             itemView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width).isActive = true
             
             

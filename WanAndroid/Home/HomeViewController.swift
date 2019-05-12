@@ -37,7 +37,7 @@ class HomeViewController: UIViewController {
     private func setupHeaderView() {
         headerView = HomeBanner.loadNib()
         guard let header = headerView else { return }
-        tableView.setTableHeaderView(header, height: 200)
+        tableView.setTableHeaderView(header, height: HomeBanner.HEIGHT)
     }
 }
 

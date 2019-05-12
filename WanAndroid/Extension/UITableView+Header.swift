@@ -25,7 +25,7 @@ extension UITableView {
      override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
      
-        // 3. Update layout every time device is rotated.
+        // Update layout every time device is rotated.
         DispatchQueue.main.async {
             self.tableView.updateHeaderViewFrame()
         }
