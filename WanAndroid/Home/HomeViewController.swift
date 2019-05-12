@@ -10,11 +10,14 @@ import UIKit
 import Moya
 
 protocol HomeView: class {
-    func displayBanners()
+    func displayBanners(banners: [Banner])
     func displayError()
 }
 
 class HomeViewController: UIViewController {
+    @IBOutlet weak var tableView: UITableView!
+    
+    private var headerView: HomeBanner?
     
     var interactor: HomeInteractorProtocol?
     
@@ -22,6 +25,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
         setup()
+        setupHeaderView()
         interactor?.loadData()
     }
     
@@ -29,11 +33,17 @@ class HomeViewController: UIViewController {
         interactor = HomeInteractor()
         interactor?.presenter = HomePresenter(view: self)
     }
+    
+    private func setupHeaderView() {
+        headerView = HomeBanner.loadNib()
+        guard let header = headerView else { return }
+        tableView.setTableHeaderView(header, height: 200)
+    }
 }
 
 extension HomeViewController: HomeView {
-    func displayBanners() {
-        
+    func displayBanners(banners: [Banner]) {
+        headerView?.reload(banners: banners)
     }
     
     func displayError() {

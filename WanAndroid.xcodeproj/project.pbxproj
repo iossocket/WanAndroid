@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		1FDF9326F03A6ADD49A2A336 /* Pods_WanAndroid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22FC477408CB5914F21AF247 /* Pods_WanAndroid.framework */; };
 		26455B7415408B1C2413FAEA /* Pods_WanAndroidUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75A6B9CA8382B152E3DFDA94 /* Pods_WanAndroidUITests.framework */; };
+		50FE50252286FCA7006648BE /* HomeBanner.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50FE50242286FCA7006648BE /* HomeBanner.xib */; };
+		50FE50272286FE73006648BE /* HomeBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE50262286FE73006648BE /* HomeBanner.swift */; };
+		50FE502922870173006648BE /* BannerItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50FE502822870173006648BE /* BannerItemView.xib */; };
+		50FE502B228701E1006648BE /* BannerItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE502A228701E1006648BE /* BannerItemView.swift */; };
+		50FE502E2287EFFF006648BE /* UITableView+Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE502D2287EFFF006648BE /* UITableView+Header.swift */; };
 		D9233119226EBCB000CDB9F0 /* WanAndroidService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9233118226EBCB000CDB9F0 /* WanAndroidService.swift */; };
 		D923311B226EBE6F00CDB9F0 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D923311A226EBE6F00CDB9F0 /* Banner.swift */; };
 		D923311D226ED09000CDB9F0 /* ResponseWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D923311C226ED09000CDB9F0 /* ResponseWrapper.swift */; };
@@ -53,6 +58,11 @@
 		0D0D0C61529E669EBDD00457 /* Pods-WanAndroidUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WanAndroidUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WanAndroidUITests/Pods-WanAndroidUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		22FC477408CB5914F21AF247 /* Pods_WanAndroid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WanAndroid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3121AA7B32FD667E439F97D3 /* Pods-WanAndroidTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WanAndroidTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WanAndroidTests/Pods-WanAndroidTests.debug.xcconfig"; sourceTree = "<group>"; };
+		50FE50242286FCA7006648BE /* HomeBanner.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeBanner.xib; sourceTree = "<group>"; };
+		50FE50262286FE73006648BE /* HomeBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBanner.swift; sourceTree = "<group>"; };
+		50FE502822870173006648BE /* BannerItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerItemView.xib; sourceTree = "<group>"; };
+		50FE502A228701E1006648BE /* BannerItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerItemView.swift; sourceTree = "<group>"; };
+		50FE502D2287EFFF006648BE /* UITableView+Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Header.swift"; sourceTree = "<group>"; };
 		75A6B9CA8382B152E3DFDA94 /* Pods_WanAndroidUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WanAndroidUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96F887473CD0A761EF8EE705 /* Pods-WanAndroidUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WanAndroidUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WanAndroidUITests/Pods-WanAndroidUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BA7884ADF3A6D37DACCAA00D /* Pods-WanAndroid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WanAndroid.release.xcconfig"; path = "Pods/Target Support Files/Pods-WanAndroid/Pods-WanAndroid.release.xcconfig"; sourceTree = "<group>"; };
@@ -123,6 +133,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		50DC371D2286FC4800332361 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				50FE50242286FCA7006648BE /* HomeBanner.xib */,
+				50FE50262286FE73006648BE /* HomeBanner.swift */,
+				50FE502822870173006648BE /* BannerItemView.xib */,
+				50FE502A228701E1006648BE /* BannerItemView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		50FE502C2287EFEA006648BE /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				50FE502D2287EFFF006648BE /* UITableView+Header.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		81346202A3E7FF44E4CAD897 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +171,7 @@
 				D9C9580822675DA50062D41D /* HomeViewController.swift */,
 				D923311E226ED3CE00CDB9F0 /* HomeInteractor.swift */,
 				D9233120226ED73700CDB9F0 /* HomePresenter.swift */,
+				50DC371D2286FC4800332361 /* View */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -189,6 +219,7 @@
 				D9233118226EBCB000CDB9F0 /* WanAndroidService.swift */,
 				D923311A226EBE6F00CDB9F0 /* Banner.swift */,
 				D923311C226ED09000CDB9F0 /* ResponseWrapper.swift */,
+				50FE502C2287EFEA006648BE /* Extension */,
 				D9C9577C226357660062D41D /* Info.plist */,
 				D9C957A622636B1B0062D41D /* IconFont */,
 				D9C957A322636ABA0062D41D /* Resource */,
@@ -342,7 +373,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9C957A522636ABA0062D41D /* iconfont.ttf in Resources */,
+				50FE50252286FCA7006648BE /* HomeBanner.xib in Resources */,
 				D9C9577B226357660062D41D /* LaunchScreen.storyboard in Resources */,
+				50FE502922870173006648BE /* BannerItemView.xib in Resources */,
 				D9C95778226357660062D41D /* Assets.xcassets in Resources */,
 				D9C95776226357660062D41D /* Main.storyboard in Resources */,
 			);
@@ -441,6 +474,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-WanAndroid/Pods-WanAndroid-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
@@ -450,6 +484,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
@@ -470,8 +505,11 @@
 				D9C9580D22675E080062D41D /* WeChatViewController.swift in Sources */,
 				D9C9581122675E4F0062D41D /* ProjectViewController.swift in Sources */,
 				D923311F226ED3CE00CDB9F0 /* HomeInteractor.swift in Sources */,
+				50FE502B228701E1006648BE /* BannerItemView.swift in Sources */,
+				50FE50272286FE73006648BE /* HomeBanner.swift in Sources */,
 				D9C9580922675DA50062D41D /* HomeViewController.swift in Sources */,
 				D9C9580B22675DEC0062D41D /* KnowledgeViewController.swift in Sources */,
+				50FE502E2287EFFF006648BE /* UITableView+Header.swift in Sources */,
 				D9C957A822636B2C0062D41D /* IconFont.swift in Sources */,
 				D9233119226EBCB000CDB9F0 /* WanAndroidService.swift in Sources */,
 				D923311B226EBE6F00CDB9F0 /* Banner.swift in Sources */,
@@ -654,8 +692,9 @@
 			baseConfigurationReference = 01352F28D60983A80AAB56B3 /* Pods-WanAndroid.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QMP4D362DR;
 				INFOPLIST_FILE = WanAndroid/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -675,8 +714,9 @@
 			baseConfigurationReference = BA7884ADF3A6D37DACCAA00D /* Pods-WanAndroid.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QMP4D362DR;
 				INFOPLIST_FILE = WanAndroid/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (

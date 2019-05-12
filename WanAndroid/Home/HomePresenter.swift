@@ -22,7 +22,7 @@ class HomePresenter: HomePresenterProtocol {
     }
     
     func displayBanners(_ banners: [Banner]) {
-        view?.displayBanners()
+        view?.displayBanners(banners: banners)
     }
     
     func displayError(_ error: WanAndroidService.APIError) {

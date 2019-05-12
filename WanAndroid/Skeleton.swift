@@ -21,7 +21,9 @@ class Skeleton {
     }
     
     let tabBarViewControllerInfos = [
-        TabBarViewControllerInfo(creator: { HomeViewController() }, title: "Home", icon: Iconfont.home, tag: 0),
+        TabBarViewControllerInfo(creator: {
+            UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController")
+        }, title: "Home", icon: Iconfont.home, tag: 0),
         TabBarViewControllerInfo(creator: { KnowledgeViewController() }, title: "Knowledge", icon: Iconfont.knowledge, tag: 1),
         TabBarViewControllerInfo(creator: { WeChatViewController() }, title: "WeChat", icon: Iconfont.wechat, tag: 2),
         TabBarViewControllerInfo(creator: { NavigationViewController() }, title: "Navigation", icon: Iconfont.navigation, tag: 3),
