@@ -19,8 +19,11 @@ class HomeBanner: UIView {
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var pageHolderView: UIView!
     
     weak var delegate: HomeBannerDelegate?
+    
+    private var banners: [Banner] = []
     
     class func loadNib() -> HomeBanner {
         guard let view = Bundle.main.loadNibNamed("HomeBanner", owner: nil, options: nil)?.first as? HomeBanner else {
@@ -28,6 +31,7 @@ class HomeBanner: UIView {
         }
         view.translatesAutoresizingMaskIntoConstraints = false
         view.scrollView.isPagingEnabled = true
+        view.pageHolderView.isHidden = true
         return view
     }
     
@@ -35,6 +39,12 @@ class HomeBanner: UIView {
         if (banners.count == 0) {
             return
         }
+        scrollView.delegate = self
+        self.banners = banners
+        pageHolderView.isHidden = false
+        pageControl.numberOfPages = banners.count
+        
+        setPageContent(index: 0)
         
         var itemViews = banners.map { banner -> UIView in
             return BannerItemView.loadNib(banner: banner)
@@ -65,6 +75,12 @@ class HomeBanner: UIView {
 
 extension HomeBanner: UIScrollViewDelegate {
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-//        scrollView.contentOffset.x
+        let indexOfPage: Int = Int(scrollView.contentOffset.x / scrollView.frame.size.width)
+        setPageContent(index: indexOfPage)
+    }
+    
+    private func setPageContent(index: Int) {
+        titleLabel.text = banners[index].title
+        pageControl.currentPage = index
     }
 }

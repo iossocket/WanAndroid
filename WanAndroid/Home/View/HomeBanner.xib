@@ -28,11 +28,15 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="4cQ-cI-RqJ">
-                            <rect key="frame" x="367" y="3.5" width="39" height="37"/>
+                            <rect key="frame" x="266" y="3.5" width="140" height="37"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="140" id="mZ7-FZ-UmU"/>
+                            </constraints>
                         </pageControl>
                     </subviews>
                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstItem="4cQ-cI-RqJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qCQ-ns-m0s" secondAttribute="trailing" constant="8" id="Jdj-vd-4c0"/>
                         <constraint firstItem="qCQ-ns-m0s" firstAttribute="leading" secondItem="OKL-A2-kRd" secondAttribute="leading" constant="8" id="OAi-JE-Ko7"/>
                         <constraint firstAttribute="trailing" secondItem="4cQ-cI-RqJ" secondAttribute="trailing" constant="8" id="RY5-A3-EXE"/>
                         <constraint firstAttribute="height" constant="44" id="XjR-51-O0k"/>
@@ -56,6 +60,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="pageControl" destination="4cQ-cI-RqJ" id="O1L-VJ-ars"/>
+                <outlet property="pageHolderView" destination="OKL-A2-kRd" id="Cbv-ri-hQx"/>
                 <outlet property="scrollView" destination="bxN-QQ-KWg" id="aSo-7K-eUq"/>
                 <outlet property="titleLabel" destination="qCQ-ns-m0s" id="WQN-mG-hbi"/>
             </connections>

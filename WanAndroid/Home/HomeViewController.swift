@@ -38,6 +38,7 @@ class HomeViewController: UIViewController {
         headerView = HomeBanner.loadNib()
         guard let header = headerView else { return }
         tableView.setTableHeaderView(header, height: HomeBanner.HEIGHT)
+        tableView.tableFooterView = UIView()
     }
 }
 
