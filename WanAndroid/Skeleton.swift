@@ -8,10 +8,9 @@
 
 import UIKit
 
-
+typealias ViewControllerCreator = () -> UIViewController
 
 class Skeleton {
-    typealias ViewControllerCreator = () -> UIViewController
     
     struct TabBarViewControllerInfo {
         let creator: ViewControllerCreator
@@ -20,21 +19,28 @@ class Skeleton {
         let tag: Int
     }
     
-    let tabBarViewControllerInfos = [
-        TabBarViewControllerInfo(creator: {
-            UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController")
-        }, title: "Home", icon: Iconfont.home, tag: 0),
-        TabBarViewControllerInfo(creator: { KnowledgeViewController() }, title: "Knowledge", icon: Iconfont.knowledge, tag: 1),
-        TabBarViewControllerInfo(creator: { WeChatViewController() }, title: "WeChat", icon: Iconfont.wechat, tag: 2),
-        TabBarViewControllerInfo(creator: { NavigationViewController() }, title: "Navigation", icon: Iconfont.navigation, tag: 3),
-        TabBarViewControllerInfo(creator: { ProjectViewController() }, title: "Project", icon: Iconfont.project, tag: 4)
-    ];
+    let homeCreator: ViewControllerCreator = {
+        let root = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController")
+        root.title = "WanAndroid"
+        let nav = UINavigationController(rootViewController: root)
+        return nav
+    }
     
     func rootViewController() -> UIViewController {
         let tabBarViewController = UITabBarController()
         tabBarViewController.selectedIndex = 0
-        tabBarViewController.viewControllers = tabBarViewControllerInfos.map { generateVC(info: $0) }
+        tabBarViewController.viewControllers = tabBarViewControllerInfos().map { generateVC(info: $0) }
         return tabBarViewController
+    }
+    
+    private func tabBarViewControllerInfos() -> [TabBarViewControllerInfo] {
+        return [
+            TabBarViewControllerInfo(creator: homeCreator, title: "Home", icon: Iconfont.home, tag: 0),
+            TabBarViewControllerInfo(creator: { KnowledgeViewController() }, title: "Knowledge", icon: Iconfont.knowledge, tag: 1),
+            TabBarViewControllerInfo(creator: { WeChatViewController() }, title: "WeChat", icon: Iconfont.wechat, tag: 2),
+            TabBarViewControllerInfo(creator: { NavigationViewController() }, title: "Navigation", icon: Iconfont.navigation, tag: 3),
+            TabBarViewControllerInfo(creator: { ProjectViewController() }, title: "Project", icon: Iconfont.project, tag: 4)
+        ]
     }
     
     private func generateVC(info: TabBarViewControllerInfo) -> UIViewController {
