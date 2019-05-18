@@ -14,11 +14,16 @@
 		50FE502922870173006648BE /* BannerItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50FE502822870173006648BE /* BannerItemView.xib */; };
 		50FE502B228701E1006648BE /* BannerItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE502A228701E1006648BE /* BannerItemView.swift */; };
 		50FE502E2287EFFF006648BE /* UITableView+Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE502D2287EFFF006648BE /* UITableView+Header.swift */; };
+		936BAC66473DEFC831C9F55A /* EarlGrey.framework in EarlGrey Copy Files */ = {isa = PBXBuildFile; fileRef = 709A36142174C9CC739602F1 /* EarlGrey.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9E4C46A780799743D40E82B7 /* EarlGrey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 709A36142174C9CC739602F1 /* EarlGrey.framework */; };
+		B5FB54C75175FB3117F7E7BC /* EarlGrey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9453BC62C3547F555ECC75B2 /* EarlGrey.swift */; };
 		D9233119226EBCB000CDB9F0 /* WanAndroidService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9233118226EBCB000CDB9F0 /* WanAndroidService.swift */; };
 		D923311B226EBE6F00CDB9F0 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D923311A226EBE6F00CDB9F0 /* Banner.swift */; };
 		D923311D226ED09000CDB9F0 /* ResponseWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D923311C226ED09000CDB9F0 /* ResponseWrapper.swift */; };
 		D923311F226ED3CE00CDB9F0 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D923311E226ED3CE00CDB9F0 /* HomeInteractor.swift */; };
 		D9233121226ED73800CDB9F0 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9233120226ED73700CDB9F0 /* HomePresenter.swift */; };
+		D9A961BC228FA26B002E9B64 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A961BB228FA26B002E9B64 /* Article.swift */; };
+		D9A961BF228FB69A002E9B64 /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A961BE228FB69A002E9B64 /* ArticleViewModel.swift */; };
 		D9C95771226357660062D41D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C95770226357660062D41D /* AppDelegate.swift */; };
 		D9C95776226357660062D41D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9C95774226357660062D41D /* Main.storyboard */; };
 		D9C95778226357660062D41D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9C95777226357660062D41D /* Assets.xcassets */; };
@@ -53,6 +58,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		FC3F2266508E6C7880395B3D /* EarlGrey Copy Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(TEST_HOST)/../";
+			dstSubfolderSpec = 0;
+			files = (
+				936BAC66473DEFC831C9F55A /* EarlGrey.framework in EarlGrey Copy Files */,
+			);
+			name = "EarlGrey Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		01352F28D60983A80AAB56B3 /* Pods-WanAndroid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WanAndroid.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WanAndroid/Pods-WanAndroid.debug.xcconfig"; sourceTree = "<group>"; };
 		0D0D0C61529E669EBDD00457 /* Pods-WanAndroidUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WanAndroidUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WanAndroidUITests/Pods-WanAndroidUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -63,7 +82,9 @@
 		50FE502822870173006648BE /* BannerItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerItemView.xib; sourceTree = "<group>"; };
 		50FE502A228701E1006648BE /* BannerItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerItemView.swift; sourceTree = "<group>"; };
 		50FE502D2287EFFF006648BE /* UITableView+Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Header.swift"; sourceTree = "<group>"; };
+		709A36142174C9CC739602F1 /* EarlGrey.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EarlGrey.framework; path = Pods/EarlGrey/EarlGrey/EarlGrey.framework; sourceTree = SOURCE_ROOT; };
 		75A6B9CA8382B152E3DFDA94 /* Pods_WanAndroidUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WanAndroidUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9453BC62C3547F555ECC75B2 /* EarlGrey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EarlGrey.swift; sourceTree = "<group>"; };
 		96F887473CD0A761EF8EE705 /* Pods-WanAndroidUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WanAndroidUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WanAndroidUITests/Pods-WanAndroidUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BA7884ADF3A6D37DACCAA00D /* Pods-WanAndroid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WanAndroid.release.xcconfig"; path = "Pods/Target Support Files/Pods-WanAndroid/Pods-WanAndroid.release.xcconfig"; sourceTree = "<group>"; };
 		D9233118226EBCB000CDB9F0 /* WanAndroidService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WanAndroidService.swift; sourceTree = "<group>"; };
@@ -71,6 +92,8 @@
 		D923311C226ED09000CDB9F0 /* ResponseWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseWrapper.swift; sourceTree = "<group>"; };
 		D923311E226ED3CE00CDB9F0 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		D9233120226ED73700CDB9F0 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		D9A961BB228FA26B002E9B64 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		D9A961BE228FB69A002E9B64 /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
 		D9C9576D226357660062D41D /* WanAndroid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WanAndroid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9C95770226357660062D41D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9C95775226357660062D41D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -109,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB0CFE69593F27B425263D36 /* Pods_WanAndroidTests.framework in Frameworks */,
+				9E4C46A780799743D40E82B7 /* EarlGrey.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +153,7 @@
 				22FC477408CB5914F21AF247 /* Pods_WanAndroid.framework */,
 				E38AA9FF8F62018A7835140A /* Pods_WanAndroidTests.framework */,
 				75A6B9CA8382B152E3DFDA94 /* Pods_WanAndroidUITests.framework */,
+				709A36142174C9CC739602F1 /* EarlGrey.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -171,6 +196,7 @@
 				D9C9580822675DA50062D41D /* HomeViewController.swift */,
 				D923311E226ED3CE00CDB9F0 /* HomeInteractor.swift */,
 				D9233120226ED73700CDB9F0 /* HomePresenter.swift */,
+				D9A961BD228FB685002E9B64 /* Model */,
 				50DC371D2286FC4800332361 /* View */,
 			);
 			path = Home;
@@ -182,6 +208,14 @@
 				D9C9580A22675DEC0062D41D /* KnowledgeViewController.swift */,
 			);
 			path = Knowledge;
+			sourceTree = "<group>";
+		};
+		D9A961BD228FB685002E9B64 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D9A961BE228FB69A002E9B64 /* ArticleViewModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		D9C95764226357660062D41D = {
@@ -218,6 +252,7 @@
 				D9C9581022675E4F0062D41D /* ProjectViewController.swift */,
 				D9233118226EBCB000CDB9F0 /* WanAndroidService.swift */,
 				D923311A226EBE6F00CDB9F0 /* Banner.swift */,
+				D9A961BB228FA26B002E9B64 /* Article.swift */,
 				D923311C226ED09000CDB9F0 /* ResponseWrapper.swift */,
 				50FE502C2287EFEA006648BE /* Extension */,
 				D9C9577C226357660062D41D /* Info.plist */,
@@ -232,6 +267,7 @@
 			children = (
 				D9C95785226357670062D41D /* WanAndroidTests.swift */,
 				D9C95787226357670062D41D /* Info.plist */,
+				9453BC62C3547F555ECC75B2 /* EarlGrey.swift */,
 			);
 			path = WanAndroidTests;
 			sourceTree = "<group>";
@@ -294,6 +330,8 @@
 				D9C9577D226357670062D41D /* Sources */,
 				D9C9577E226357670062D41D /* Frameworks */,
 				D9C9577F226357670062D41D /* Resources */,
+				FC3F2266508E6C7880395B3D /* EarlGrey Copy Files */,
+				E7CACD0C5868269FAEFB0B99 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -494,6 +532,28 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WanAndroid/Pods-WanAndroid-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E7CACD0C5868269FAEFB0B99 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WanAndroidTests/Pods-WanAndroidTests-frameworks.sh",
+				"${PODS_ROOT}/EarlGrey/EarlGrey/EarlGrey.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EarlGrey.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WanAndroidTests/Pods-WanAndroidTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -515,6 +575,8 @@
 				D923311B226EBE6F00CDB9F0 /* Banner.swift in Sources */,
 				D9233121226ED73800CDB9F0 /* HomePresenter.swift in Sources */,
 				D923311D226ED09000CDB9F0 /* ResponseWrapper.swift in Sources */,
+				D9A961BC228FA26B002E9B64 /* Article.swift in Sources */,
+				D9A961BF228FB69A002E9B64 /* ArticleViewModel.swift in Sources */,
 				D9C9580722675CD80062D41D /* Skeleton.swift in Sources */,
 				D9C95771226357660062D41D /* AppDelegate.swift in Sources */,
 			);
@@ -525,6 +587,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9C95786226357670062D41D /* WanAndroidTests.swift in Sources */,
+				B5FB54C75175FB3117F7E7BC /* EarlGrey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

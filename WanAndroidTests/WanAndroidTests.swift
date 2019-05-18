@@ -7,28 +7,26 @@
 //
 
 import XCTest
+import EarlGrey
 @testable import WanAndroid
 
 class WanAndroidTests: XCTestCase {
-
+    
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        super.setUp()
+//        let success = GREYCondition(name: "Wait for main root view controller") { () -> Bool in
+//            let delegate = UIApplication.shared.delegate
+//            guard let rootVC = delegate?.window??.rootViewController else {
+//                return false
+//            }
+//            return rootVC.isKind(of: UITabBarController.self)
+//        }.wait(withTimeout: 5)
+//
+//        GREYAssertTrue(success, reason: "Main view controller should appear within 5 seconds.");
     }
 
     func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        EarlGrey.selectElement(with: grey_keyWindow()).assert(grey_sufficientlyVisible())
+        EarlGrey.selectElement(with: grey_accessibilityID("home_page_tableview")).assert(grey_sufficientlyVisible())
     }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }

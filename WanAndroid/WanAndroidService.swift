@@ -10,6 +10,7 @@ import Moya
 
 enum WanAndroidService {
     case banner
+    case articleList(index: Int)
 }
 
 extension WanAndroidService {
@@ -28,12 +29,14 @@ extension WanAndroidService: TargetType {
         switch self {
         case .banner:
             return "/banner/json"
+        case .articleList(let index):
+            return "/article/list/\(index)/json"
         }
     }
     
     var method: Method {
         switch self {
-        case .banner:
+        case .banner, .articleList:
             return .get
         }
     }
@@ -129,12 +132,14 @@ extension WanAndroidService: TargetType {
             "errorMsg": ""
             }
             """.data(using: .utf8)!
+        case .articleList:
+            return "".data(using: .utf8)!
         }
     }
     
     var task: Task {
         switch self {
-        case .banner:
+        case .banner, .articleList:
             return .requestPlain
         }
     }

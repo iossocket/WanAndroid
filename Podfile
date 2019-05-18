@@ -12,6 +12,7 @@ target 'WanAndroid' do
   target 'WanAndroidTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'EarlGrey'
   end
 
   target 'WanAndroidUITests' do

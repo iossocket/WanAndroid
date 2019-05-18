@@ -11,6 +11,7 @@ import Foundation
 protocol HomePresenterProtocol {
     func displayError(_ error: WanAndroidService.APIError)
     func displayBanners(_ banners: [Banner])
+    func displayArticleList(_ list: [Article])
 }
 
 class HomePresenter: HomePresenterProtocol {
@@ -23,6 +24,10 @@ class HomePresenter: HomePresenterProtocol {
     
     func displayBanners(_ banners: [Banner]) {
         view?.displayBanners(banners: banners)
+    }
+    
+    func displayArticleList(_ list: [Article]) {
+        view?.displayArticles(list.map { ArticleViewModel(title: $0.title, author: $0.author) })
     }
     
     func displayError(_ error: WanAndroidService.APIError) {
