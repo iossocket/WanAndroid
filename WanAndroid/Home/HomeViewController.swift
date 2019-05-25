@@ -72,6 +72,11 @@ extension HomeViewController: HomeView {
     }
     
     func displayError() {
-        
+        if let header = tableView.mj_header, header.state != .idle {
+            header.endRefreshing()
+        }
+        if let footer = tableView.mj_footer, footer.state != .idle {
+            footer.endRefreshing()
+        }
     }
 }

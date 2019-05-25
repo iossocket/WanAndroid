@@ -46,7 +46,7 @@ class HomeInteractor: HomeInteractorProtocol {
                 }
                 self?.presenter?.displayArticleList(articleList.data, previousList: previousList)
             case .failure( _):
-                print("failed")
+                self?.presenter?.displayError(.requestFailed)
             }
         }
     }
