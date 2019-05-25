@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Moya
 
 protocol HomeView: class {
     func displayBanners(banners: [Banner])
