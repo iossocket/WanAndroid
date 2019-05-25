@@ -12,6 +12,7 @@ protocol HomeView: class {
     func displayBanners(banners: [Banner])
     func displayArticlesByDataSource(_ dataSource: HomeDataSource)
     func displayError()
+    func setLoadMoreFooter()
 }
 
 class HomeViewController: UIViewController {
@@ -24,7 +25,7 @@ class HomeViewController: UIViewController {
             tableView.delegate = dataSource
             tableView.reloadData()
             tableView.mj_header.endRefreshing()
-            dataSource!.hasMorePage ? tableView.mj_footer.endRefreshing() : tableView.mj_footer.endRefreshingWithNoMoreData()
+            dataSource!.hasMorePage ? tableView.mj_footer?.endRefreshing() : tableView.mj_footer?.endRefreshingWithNoMoreData()
         }
     }
     
@@ -36,7 +37,9 @@ class HomeViewController: UIViewController {
         tableView.accessibilityIdentifier = "home_page_tableview"
         setup()
         setupHeaderView()
-        setupFetch()
+        tableView.mj_header = MJRefreshNormalHeader(refreshingBlock: { [weak self] in
+            self?.interactor?.loadInitialData()
+        })
         interactor?.loadInitialData()
     }
     
@@ -51,15 +54,6 @@ class HomeViewController: UIViewController {
         tableView.setTableHeaderView(header, height: HomeBanner.HEIGHT)
         tableView.tableFooterView = UIView()
     }
-    
-    private func setupFetch() {
-        tableView.mj_header = MJRefreshNormalHeader(refreshingBlock: { [weak self] in
-            self?.interactor?.loadInitialData()
-        })
-        tableView.mj_footer = MJRefreshAutoNormalFooter(refreshingBlock: { [weak self] in
-            self?.interactor?.loadMoreData(dataSource: self?.dataSource)
-        })
-    }
 }
 
 extension HomeViewController: HomeView {
@@ -69,6 +63,12 @@ extension HomeViewController: HomeView {
     
     func displayArticlesByDataSource(_ dataSource: HomeDataSource) {
         self.dataSource = dataSource
+    }
+    
+    func setLoadMoreFooter() {
+        tableView.mj_footer = MJRefreshAutoNormalFooter(refreshingBlock: { [weak self] in
+            self?.interactor?.loadMoreData(dataSource: self?.dataSource)
+        })
     }
     
     func displayError() {

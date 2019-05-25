@@ -29,6 +29,9 @@ class HomePresenter: HomePresenterProtocol {
     func displayArticleList(_ list: ArticleList, previousList: [ArticleViewModel]) {
         let dataSource = HomeDataSource(articleList: list, previousList: previousList)
         view?.displayArticlesByDataSource(dataSource)
+        if dataSource.currentPage == 1 {
+            view?.setLoadMoreFooter()
+        }
     }
     
     func displayError(_ error: WanAndroidService.APIError) {
