@@ -8,6 +8,8 @@ target 'WanAndroid' do
   pod 'Moya', '13.0.1'
   pod 'PromiseKit', '~> 6.8'
   pod 'Kingfisher', '~> 5.0'
+  pod 'lottie-ios'
+  pod 'MJRefresh'
 
   target 'WanAndroidTests' do
     inherit! :search_paths

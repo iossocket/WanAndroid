@@ -2,6 +2,8 @@ PODS:
   - Alamofire (4.8.2)
   - EarlGrey (1.15.0)
   - Kingfisher (5.4.0)
+  - lottie-ios (3.0.4)
+  - MJRefresh (3.2.0)
   - Moya (13.0.1):
     - Moya/Core (= 13.0.1)
   - Moya/Core (13.0.1):
@@ -21,6 +23,8 @@ PODS:
 DEPENDENCIES:
   - EarlGrey
   - Kingfisher (~> 5.0)
+  - lottie-ios
+  - MJRefresh
   - Moya (= 13.0.1)
   - PromiseKit (~> 6.8)
 
@@ -29,6 +33,8 @@ SPEC REPOS:
     - Alamofire
     - EarlGrey
     - Kingfisher
+    - lottie-ios
+    - MJRefresh
     - Moya
     - PromiseKit
     - Result
@@ -37,10 +43,12 @@ SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   EarlGrey: 289a16cc7d08a54b962d72881b21e36d5103b549
   Kingfisher: 9c8f2cc6710334e06f32ba2b45e77707d5e2f0c9
+  lottie-ios: 55a2de40418f8de2b155efaba4d4d1a025a5c570
+  MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
   PromiseKit: 51794a832647e7b819336dc2279039ce9f1cc49b
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
 
-PODFILE CHECKSUM: d8a2053184b38e4f714a082eb6ee9b40cad72ee3
+PODFILE CHECKSUM: 5e88e7cf7493b24809b292d9e8f7383613a5a002
 
 COCOAPODS: 1.6.1

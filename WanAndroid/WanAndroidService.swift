@@ -7,6 +7,7 @@
 //
 
 import Moya
+import Alamofire
 
 enum WanAndroidService {
     case banner
@@ -34,7 +35,7 @@ extension WanAndroidService: TargetType {
         }
     }
     
-    var method: Method {
+    var method: MyHttpMethod {
         switch self {
         case .banner, .articleList:
             return .get

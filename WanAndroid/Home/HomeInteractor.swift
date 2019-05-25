@@ -11,6 +11,7 @@ import Moya
 protocol HomeInteractorProtocol {
     var presenter: HomePresenterProtocol? { get set }
     func loadInitialData()
+    func loadMoreData(dataSource: HomeDataSource?)
 }
 
 class HomeInteractor: HomeInteractorProtocol {
@@ -23,18 +24,27 @@ class HomeInteractor: HomeInteractorProtocol {
     
     func loadInitialData() {
         fetchBanners()
-        fetchInitialArticles()
+        fetchAtriclesByIndex(0)
     }
     
-    private func fetchInitialArticles() {
-        provider.request(.articleList(index: 0)) { [weak self] result in
+    func loadMoreData(dataSource: HomeDataSource?) {
+        guard let dataSource = dataSource else { return }
+        if !dataSource.hasMorePage {
+            return
+        }
+        
+        fetchAtriclesByIndex(dataSource.currentPage, previousList: dataSource.currentArticleViewModels())
+    }
+    
+    private func fetchAtriclesByIndex(_ index: Int, previousList: [ArticleViewModel] = []) {
+        provider.request(.articleList(index: index)) { [weak self] result in
             switch result {
             case .success(let value):
                 guard let articleList = try? JSONDecoder().decode(ResponseWrapper<ArticleList>.self, from: value.data) else {
                     self?.presenter?.displayError(.parseError)
                     return
                 }
-                self?.presenter?.displayArticleList(articleList.data.datas)
+                self?.presenter?.displayArticleList(articleList.data, previousList: previousList)
             case .failure( _):
                 print("failed")
             }

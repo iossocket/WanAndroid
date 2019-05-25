@@ -11,7 +11,7 @@ import Moya
 
 protocol HomeView: class {
     func displayBanners(banners: [Banner])
-    func displayArticles(_ articles: [ArticleViewModel])
+    func displayArticlesByDataSource(_ dataSource: HomeDataSource)
     func displayError()
 }
 
@@ -19,26 +19,25 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     private var headerView: HomeBanner?
-    private let refreshControl: UIRefreshControl = UIRefreshControl()
+    private var dataSource: HomeDataSource? {
+        didSet {
+            tableView.dataSource = dataSource
+            tableView.delegate = dataSource
+            tableView.reloadData()
+            tableView.mj_header.endRefreshing()
+            dataSource!.hasMorePage ? tableView.mj_footer.endRefreshing() : tableView.mj_footer.endRefreshingWithNoMoreData()
+        }
+    }
     
     var interactor: HomeInteractorProtocol?
-    var articles: [ArticleViewModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
         tableView.accessibilityIdentifier = "home_page_tableview"
-        tableView.dataSource = self
-        tableView.refreshControl = refreshControl
-        refreshControl.addTarget(self, action: #selector(refreshWeatherData(_:)), for: .valueChanged)
         setup()
         setupHeaderView()
-        interactor?.loadInitialData()
-    }
-    
-    @objc func refreshWeatherData(_ sender: Any) {
-        print("begin refresh")
-        self.refreshControl.beginRefreshing()
+        setupFetch()
         interactor?.loadInitialData()
     }
     
@@ -53,6 +52,15 @@ class HomeViewController: UIViewController {
         tableView.setTableHeaderView(header, height: HomeBanner.HEIGHT)
         tableView.tableFooterView = UIView()
     }
+    
+    private func setupFetch() {
+        tableView.mj_header = MJRefreshNormalHeader(refreshingBlock: { [weak self] in
+            self?.interactor?.loadInitialData()
+        })
+        tableView.mj_footer = MJRefreshAutoNormalFooter(refreshingBlock: { [weak self] in
+            self?.interactor?.loadMoreData(dataSource: self?.dataSource)
+        })
+    }
 }
 
 extension HomeViewController: HomeView {
@@ -60,32 +68,11 @@ extension HomeViewController: HomeView {
         headerView?.reload(banners: banners)
     }
     
-    func displayArticles(_ articles: [ArticleViewModel]) {
-        print("end refresh")
-        self.articles = articles
-        self.tableView.reloadData()
-        self.refreshControl.endRefreshing()
+    func displayArticlesByDataSource(_ dataSource: HomeDataSource) {
+        self.dataSource = dataSource
     }
     
     func displayError() {
         
-    }
-}
-
-extension HomeViewController: UITableViewDataSource {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return articles.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let index = indexPath.row
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
-        cell.textLabel?.text = articles[index].title
-        cell.detailTextLabel?.text = articles[index].author
-        return cell
     }
 }
