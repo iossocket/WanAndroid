@@ -179,12 +179,12 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		50FE502C2287EFEA006648BE /* Extension */ = {
+		50FE502C2287EFEA006648BE /* UIExtension */ = {
 			isa = PBXGroup;
 			children = (
 				50FE502D2287EFFF006648BE /* UITableView+Header.swift */,
 			);
-			path = Extension;
+			path = UIExtension;
 			sourceTree = "<group>";
 		};
 		81346202A3E7FF44E4CAD897 /* Pods */ = {
@@ -229,6 +229,26 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		D9BC3751229930F8007540D6 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D9BC374F22991824007540D6 /* MoyaExtension.swift */,
+				D9233118226EBCB000CDB9F0 /* WanAndroidService.swift */,
+				D9BC37522299312B007540D6 /* Model */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		D9BC37522299312B007540D6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D923311C226ED09000CDB9F0 /* ResponseWrapper.swift */,
+				D923311A226EBE6F00CDB9F0 /* Banner.swift */,
+				D9A961BB228FA26B002E9B64 /* Article.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		D9C95764226357660062D41D = {
 			isa = PBXGroup;
 			children = (
@@ -256,17 +276,13 @@
 			children = (
 				D9C95770226357660062D41D /* AppDelegate.swift */,
 				D9C9580622675CD80062D41D /* Skeleton.swift */,
+				D9BC3751229930F8007540D6 /* Service */,
 				D9233117226EB86C00CDB9F0 /* Knowledge */,
 				D9233116226EB85F00CDB9F0 /* Home */,
 				D9C9580C22675E080062D41D /* WeChatViewController.swift */,
 				D9C9580E22675E320062D41D /* NavigationViewController.swift */,
 				D9C9581022675E4F0062D41D /* ProjectViewController.swift */,
-				D9233118226EBCB000CDB9F0 /* WanAndroidService.swift */,
-				D923311A226EBE6F00CDB9F0 /* Banner.swift */,
-				D9A961BB228FA26B002E9B64 /* Article.swift */,
-				D923311C226ED09000CDB9F0 /* ResponseWrapper.swift */,
-				D9BC374F22991824007540D6 /* MoyaExtension.swift */,
-				50FE502C2287EFEA006648BE /* Extension */,
+				50FE502C2287EFEA006648BE /* UIExtension */,
 				D9C9577C226357660062D41D /* Info.plist */,
 				D9C957A622636B1B0062D41D /* IconFont */,
 				D9C957A322636ABA0062D41D /* Resource */,
